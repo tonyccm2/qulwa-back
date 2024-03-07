@@ -18,5 +18,3 @@ export class CreateAccountDto {
     @IsNotEmpty()
     currency: string;
 }
-
-export class UpdateAccountDto extends PartialType(CreateAccountDto) {}

@@ -1,9 +1,7 @@
 import { PartialType } from '@nestjs/mapped-types';
-import {
-    IsNotEmpty,
-} from 'class-validator';
-export class CreateAccountDto {
-    
+import { CreateAccountDto } from './create-account.dto';
+import { IsNotEmpty } from 'class-validator';
+export class UpdateAccountDto extends PartialType(CreateAccountDto) {
     @IsNotEmpty()
     name: string;
 
@@ -16,5 +14,3 @@ export class CreateAccountDto {
     @IsNotEmpty()
     currency: string;
 }
-
-export class UpdateAccountDto extends PartialType(CreateAccountDto) {}
