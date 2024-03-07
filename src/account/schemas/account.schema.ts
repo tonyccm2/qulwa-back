@@ -6,7 +6,7 @@ import { User } from "src/user/schemas/user.schema";
 export class Account {
 
     @Prop({ type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User' })
-    user: string | User;
+    id_user: User;
     
     @Prop({ required: true })
     name: string;
@@ -16,9 +16,6 @@ export class Account {
 
     @Prop({ required: true })
     color: string;
-
-    @Prop({ required: true })
-    balance: number;
 
     @Prop({ required: true })
     currency: string;
