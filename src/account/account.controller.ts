@@ -1,7 +1,8 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, Res, HttpStatus, NotFoundException } from '@nestjs/common';
 import { AccountService } from './account.service';
-import { CreateAccountDto, UpdateAccountDto } from './dto/create-account.dto';
+import { CreateAccountDto } from './dto/create-account.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { UpdateAccountDto } from './dto/update-account.dto';
 
 @ApiTags('account')
 @Controller('account')
